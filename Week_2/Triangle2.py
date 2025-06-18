@@ -4,7 +4,7 @@ angleA = float(input('Enter angle A: '))
 angleB = float(input('Enter angle B: '))
 sideB = float(input('Enter side B: '))
 
-# Sine rule
+# Sine rule:
 # a / sinA = b / sinB = c / sinC
 # a = b.sinA / sinB
 
