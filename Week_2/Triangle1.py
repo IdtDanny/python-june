@@ -1,34 +1,22 @@
 import math
 
-a = float(input('Enter 1st Side: '))
-b = float(input('Enter 2nd Side: '))
-angle1 = float(input('Enter one angle: '))
+sideA = float(input('Enter Side A: '))
+sideB = float(input('Enter Side B: '))
+angleC = float(input('Enter angle C: '))
 
 # c2 = a2 + b2 - 2ab.cosC
+# Test with A = 37, B=53, C=90, a=3, b=4, c = 5, Area = 6
 
-a2 = math.pow(a,2)
-b2 = math.pow(b, 2)
-cosC = math.cos(math.radians(angle1))
-ab = 2 * a * b * cosC
+c2 = math.pow(sideA, 2) + math.pow(sideB, 2) - (2 * sideA * sideB * math.cos(math.radians(angleC)))
 
-c2 = a2 + b2 - ab
+sideC = math.sqrt(c2)
 
-c = math.sqrt(c2)
+sin_angleB = sideB * math.sin(math.radians(angleC)) / sideC
 
-print(f'Side c: {c}')
+angleB = math.degrees(math.asin(sin_angleB))
 
-# cosA = (b2 + c2 - a2)/2bc
+angleA = 180 - (angleB + angleC)
 
-cosA = (b2 + c2 - a2) / (2 * b * c)
+print(f'Side C: {sideC} \nAngle A: {angleA} \nAngle B: {angleB} \nAngle C: {angleC}')
 
-angle2 = math.degrees(math.acos(cosA))
-
-print(f'Angle A: {angle2}')
-
-# cosB = (c2 + a2 - b2)/2ac
-
-cosB = (c2 + a2 - b2) / (2 * a * c)
-
-angle3 = math.degrees(math.acos(cosB))
-
-print(f'Angle B: {angle3}')
+print(f'The area is: {sideA * sideC * sin_angleB * 0.5}')
