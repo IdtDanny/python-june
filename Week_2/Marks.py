@@ -1,4 +1,4 @@
-modules = {'Python': 0, 'ICT': 0, 'Cryptograph': 0, 'Operations Research': 0, 'Linear Algebra' : 0}
+modules = {'Python': 0.0, 'ICT': 0, 'Cryptograph': 0.0, 'Operations Research': 0.0, 'Linear Algebra' : 0.0}
 
 total = 0
 
@@ -10,6 +10,8 @@ for key, values in modules.items():
     total += modules[key]
     if maximum < modules[key]:
         maximum = modules[key]
+        max_module = key
+
 
 average = total / 5
 
@@ -18,15 +20,15 @@ print(f'\nThe average is {average} %')
 if average < 100:
     if average > 80:
         print('A (Excellent)')
-    elif average >= 70 and average < 80:
+    elif 70 <= average < 80:
         print('B (Very Good)')
-    elif average >= 60 and average < 70:
+    elif 60 <= average < 70:
         print('C (Good)')
-    elif average >= 50 and average < 60:
+    elif 50 <= average < 60:
         print('D (Pass)')
     else:
         print('F (Fail)')
 else:
     print('Out of range')
 
-print(f'The maximum is {maximum} %')
+print(f'The maximum marks is {maximum} % for {max_module}')
