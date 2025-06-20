@@ -13,7 +13,7 @@ sideC = math.sqrt(c2)
 
 sin_angleB = sideB * math.sin(math.radians(angleC)) / sideC
 
-angleB = math.degrees(math.asin(sin_angleB))
+angleB = math.degrees( math.asin(sin_angleB))
 
 angleA = 180 - (angleB + angleC)
 
