@@ -1,4 +1,4 @@
-modules = {'Python': 0.0, 'ICT': 0, 'Cryptograph': 0.0, 'Operations Research': 0.0, 'Linear Algebra' : 0.0}
+modules = {'Python': 0.0, 'ICT': 0.0, 'Cryptograph': 0.0, 'Operations Research': 0.0, 'Linear Algebra' : 0.0}
 
 total = 0
 
