@@ -1,12 +1,13 @@
 import pandas as pd
 
-data = {'Employee_ID': ['2401', '2402'],
-        'Name': ['2401', '2402'],
-        'Department': ['2401', '2402'],
-        'Date': ['2401', '2402'],
-        'Status': ['Present', 'Absent']
-        }
+data = {'Employee_ID' : ['2401', '2402'],
+        'Name' : ['Danny', 'David'],
+        'Department' : ['Management', 'Engineer'],
+        'Date': ['15 June', '01 July'],
+        'Status': ['Present', 'Absent']}
 
-attendance = pd.DataFrame(data)
+attendance = pd.read_csv('Attendance.csv')
+
+# attendance = pd.DataFrame(data)
 
 print(attendance)
